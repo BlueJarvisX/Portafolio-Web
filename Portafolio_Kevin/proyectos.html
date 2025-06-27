@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | Kevin</title>
+    <link rel="stylesheet" href="assets/css/proyectos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header" id="main-header">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a href="inicio.html" class="logo" aria-label="Inicio"><span>KEVIN ALEXANDER ARAYA TORO</span></a>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="proyectos.html" class="active">Proyectos</a></li>
+                <li><a href="Experencias.html">Experiencias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="projects-hero">
+            <h1>Portafolio de Proyectos</h1>
+            <p>Descubre algunos de mis trabajos destacados en desarrollo web y software.</p>
+        </div>
+    </header>
+    <main>
+        <section class="projects-filter">
+            <label for="filter-tech" class="filter-label">Filtrar por tecnología:</label>
+            <select id="filter-tech" aria-label="Filtrar proyectos por tecnología">
+                <option value="all">Todos</option>
+                <option value="javascript">JavaScript</option>
+                <option value="css">CSS</option>
+                <option value="Express">Express</option>
+                <option value="node">Node.js</option>
+                <option value="database">database</option>
+                <option value="html">html</option>
+                <option value="Java">Java</option>
+
+            </select>
+        </section>
+        <section class="projects-grid" id="projects-grid" aria-live="polite">
+            <!-- Tarjetas de proyectos generadas dinámicamente -->
+        </section>
+    </main>
+    <footer class="main-footer">
+        <p>&copy; 2025 Kevin. Todos los derechos reservados.</p>
+    </footer>
+    <script src="assets/js/proyectos.js"></script>
+</body>
+</html>

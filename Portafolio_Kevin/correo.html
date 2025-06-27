@@ -1,0 +1,61 @@
+<!-- Correo de contacto -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correo | Kevin</title>
+    <link rel="stylesheet" href="assets/css/correo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header" id="main-header">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a href="inicio.html" class="logo" aria-label="Inicio"><span>KEVIN ALEXANDER ARAYA TORO</span></a>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="Experencias.html">Experiencias</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-form-section">
+            <h2>Envíame un mensaje</h2>
+            <form action="https://formsubmit.co/kevinnotfound23@gmail.com" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="name" required aria-required="true" autocomplete="name">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="subject" required aria-required="true" autocomplete="off">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="message" rows="5" required aria-required="true"></textarea>
+                    <span class="error-message"></span>
+                </div>
+                <button type="submit" class="btn-primary">Enviar mensaje</button>
+                <input type="hidden" name="_captcha" value="false">  <!-- True para activar el captcha -->
+                <!-- <input type="hidden" name="_next" value="https://tu-dominio.com/gracias.html"> -->
+            </form>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <p>&copy; 2025 Kevin. Todos los derechos reservados.</p>
+    </footer>
+    <script src="assets/js/correo.js"></script>
+</body>
+</html>

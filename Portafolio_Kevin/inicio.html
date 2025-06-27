@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Portafolio | Inicio</title>
+    <link rel="stylesheet" href="assets/css/inicio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header" id="main-header">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a href="inicio.html" class="logo" aria-label="Inicio">
+                <span>KEVIN ALEXANDER ARAYA TORO</span>
+            </a>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="inicio.html" class="active">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="Experencias.html">Experiencias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Bienvenido a mi Portafolio</h1>
+                <p class="hero-subtitle">Analista Programador | Desarrollo Web &amp; Software</p>
+                <p class="hero-description">
+                    Enfocado en el diseño de páginas web atractivas y funcionales.
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="about" id="about">
+            <div class="about-photo">
+                <div class="about-photo-inner">
+                    <img src="https://pm1.aminoapps.com/7272/13e8b4249f4d466db18d92b4afe44454e2b4c2a3r1-705-705v2_00.jpg" alt="Foto profesional de Kevin" />
+                </div>
+            </div>
+            <div class="about-info">
+                <h2>¿Quién soy?</h2>
+                <p>
+                    Soy Kevin, analista programador apasionado por la tecnología y el desarrollo de soluciones innovadoras. 
+                    Cuento con experiencia en desarrollo web, aplicaciones y automatización de procesos. 
+                    Mi objetivo es aportar valor a través de la excelencia técnica y la creatividad.<br>
+                    <span class="highlight">"Lo que más me gusta es diseñar el interfaz de usuario."</span>
+                </p> 
+                    <span style="display:block; margin-top:1.2em; font-weight:600; color:#4e6fae;">Mi frase:</span>
+                    <strong id="rainbow-quote" class="rainbow-animated">Puedes juzgar mis métodos, pero no mis resultados.</strong>
+                </p>
+                <a href="contacto.html" class="btn-primary">Contáctame</a>
+                <a href="KevinCV.pdf" class="btn-cv" target="_blank" rel="noopener">Ver Curriculum</a>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <p>&copy; 2025 Kevin. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Botón Spider-Verso (añade esto ANTES del script de inicio.js) -->
+    <button id="spider-toggle" class="spider-btn">🕷️ Modo Spider-Verso</button>
+    <div id="spider-effects"></div>
+
+    <script src="assets/js/inicio.js"></script>
+    <script>
+    // Animación de color profesional para la frase
+    const colors = [
+        'linear-gradient(90deg, #ff512f, #dd2476, #ff512f)',
+        'linear-gradient(90deg, #24c6dc, #5433ff, #24c6dc)',
+        'linear-gradient(90deg, #f7971e, #ffd200, #f7971e)',
+        'linear-gradient(90deg, #43cea2, #185a9d, #43cea2)',
+        'linear-gradient(90deg, #fc466b, #3f5efb, #fc466b)',
+        'linear-gradient(90deg, #00c3ff, #00ffea, #00c3ff)', 
+        'linear-gradient(90deg, #f953c6, #b91d73, #f953c6)',
+        'linear-gradient(90deg, #ee0979, #ff6a00, #ee0979)'
+    ];
+    let colorIndex = 0;
+    const quote = document.getElementById('rainbow-quote');
+    function animateRainbowQuote() {
+        quote.style.background = colors[colorIndex];
+        quote.style.backgroundClip = 'text';
+        quote.style.webkitBackgroundClip = 'text';
+        quote.style.color = 'transparent';
+        quote.style.webkitTextFillColor = 'transparent';
+        quote.style.transition = 'background 1.2s cubic-bezier(.4,2,.6,1)';
+        colorIndex = (colorIndex + 1) % colors.length;
+    }
+    animateRainbowQuote();
+    setInterval(animateRainbowQuote, 2000);
+    </script>
+</body>
+</html>
